@@ -17,8 +17,8 @@
 // }
 
 // const mail ={
-//     from:'takizawa1223.hal@gmail.com',
-//     to :'takizawa1223.hal@gmail.com',
+//     from:'example@email',
+//     to :'exampple@emial',
 //     subject:'email test',
 //     text:'email sent',
 // }
@@ -61,19 +61,19 @@ function sendMail (smtpData, mailData) {
 function main() {
   // SMTP情報を格納（Gmailの場合）
   const smtpData = {
-    host: 'smtp.gmail.com', // Gmailのサーバ
+    host: 'gmail.com', // Gmailのサーバ
     port: '465',            // Gmailの場合　SSL: 465 / TLS: 587
     secure: true,           // true = SSL
     auth: {
-      user: 'takizawa1223.hal@gmail.com',  // メールアドレス（自身のアドレスを指定）
-      pass: 'riku1223'            // パスワード（自身のパスワードを指定）
+      user: 'example@mail.com',  // メールアドレス（自身のアドレスを指定）
+      pass: 'passeword'            // パスワード（自身のパスワードを指定）
     }
   }
 
   // 送信内容を作成
   const mailData = {
     from: '"テストユーザ" <' + smtpData.auth.user + '>', // 送信元名
-    to: 'takizawa1223.hal@gmail.com',                         // 送信先
+    to: 'example@mail.com',                         // 送信先
     subject: 'こんにちは',                               // 件名
     text: 'お元気ですか？',                              // 通常のメール本文
     html: '<b>お元気ですか？</b>',                       // HTMLメール
